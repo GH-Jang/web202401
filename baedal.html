@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배달 주문 페이지</title>
+</head>
+<body>
+    <h1 style="text-align: center;">호달송 배달 페이지</h1>
+    <div style="text-align: center;">
+    호서식당의 음식을 집에서 즐길 수 있는 배달 주문 페이지입니다.<br>
+    조리된 음식이 요청하신 주소로 배달됩니다.<br>
+    배달 가능 지역 : 천안시 동남구
+    </div>
+    <hr>
+    <h2>주문 정보 (필수)</h2>
+    <form>
+        <fieldset>
+            <legend> 배달 시간 (필수) </legend>
+            <div>
+                <label for="date">배달 요청 날짜 : </label>
+                <input type="date" id="date" min="12:00:00" max="21:00:00" required>
+            </div>
+            <div>
+                <label for="time">배달 요청 시간 : </label>
+                <input type="time" id="time" required>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend> 배달 음식 주문 (필수) </legend>
+            <br>
+            <div>
+                <label for="menu">메뉴 사전 주문 (검색 가능) : </label>
+                <input list="menu-list" id="menu" name="menu">
+                    <datalist id="menu-list">
+                        <option value="점심정식"> : 돌솥밥, 찌개, 제육</option>
+                        <option value="백반정식"> : 밥, 국, 5종 반찬</option>
+                        <option value="저녁정식"> : 점심정식 + 생선구이</option>
+                        <option value="룸정식"> : 저녁정식 + 갈비찜 + 디저트</option>
+                        <option value="제육볶음">제육볶음</option>
+                        <option value="돼지불고기">돼지불고기</option>
+                        <option value="소불고기">소불고기</option>
+                        <option value="된장찌개">된장찌개</option>
+                        <option value="김치찌개">김치찌개</option>
+                        <option value="부대찌개">부대찌개</option>
+
+                </datalist>
+            </div>
+        </fieldset>
+        <br>
+        <h2>배달 정보 (필수)</h2>
+        <fieldset>
+            <legend>배송 관련 인적사항 및 주소</legend>
+            <div>
+                <label for="name"> 성명 : </label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="tel"> 전화번호 : </label>
+                <input type="tel" id="tel" required>
+            </div>
+            <br>
+            주소의 경우 회원가입 주소와 동일한 주소 여부 선택 (택일 필수)
+            <br>
+            <label for="same">동일 주소</label>
+            <input type="radio" name="select" id="same">
+            <label for="new">다른 주소 (아래 주소 입력)</label>
+            <input type="radio" name="select" id="new"> 
+            <br><br>
+            * 다른 주소로 배달 시 아래에 주소 입력 (다른 주소 배달시 필수)
+            <div>
+                <textarea rows="1" cols="50 "placeholder="세부 주소를 입력해주세요"></textarea>
+            </div>
+        </fieldset>
+        <br>
+        <h2>결제</h2>
+        <fieldset>
+            <legend>결제 정보 입력</legend>
+            <h3>결제 방식을 아래에서 택일 하세요 (필수)</h3>
+            <label for="cash">현장 결제 (현금)</label>
+            <input type="radio" name="payment" id="cash">
+            <label for="card">현장 결제 (카드)</label>
+            <input type="radio" name="payment" id="card"> 
+            <label for="pay">사전 결제 (카드)</label>
+            <input type="radio" name="payment" id="pay"> 
+            <br><br><br>
+            사전 결제 선택 시 아래에서 카드 정보 입력 바랍니다.<br><br>
+            <fieldset> <legend> 카드 타입 (택일)</legend>
+                <input type="radio" name="card" value="visa" />VISA
+                <input type="radio" name="card" value="amex" />AmEx
+                <input type="radio" name="card" value="master" />Mastercard
+                </ol>
+               </fieldset>
+               <br>
+              <li> 카드 번호 <input type="number" name="cardno" /></li>
+              <li> CVC 코드 <input type="number" name="cvcno" /></li>
+              <li> 카드 명의자 이름 <input type="text" name="name" placeholder="카드 명의자 이름" />
+            <br>
+        </fieldset>
+        <br>
+        <input type="submit" value="배달 주문하기">
+        <input type="reset" value="입력 초기화">
+    </form>
+    <br>
+    배달 접수시 등록하신 휴대폰 번호로 배달 관련 사항이 발송됩니다.
+    <br>
+    <br>
+</body>
+</html>
