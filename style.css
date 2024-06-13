@@ -1,0 +1,124 @@
+* {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+nav{
+    position: sticky;
+    top:5px;
+    background-color: darkslategray;
+    color:white;
+    font-weight: bolder;
+}
+
+.nav-container{
+    display:flex;
+    list-style: none;
+}
+
+.nav-item{
+    margin-right:30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding:5px;
+    cursor:pointer;
+}
+
+.nav-item a{
+    text-align: center;
+    text-decoration: none;
+    color:white;
+}
+
+.nav-item:hover{
+    border:2px solid white;
+}
+
+header{
+    text-align: center;
+}
+
+h1 {
+    font-size:36px;
+    margin-left:15px;
+}
+
+h2 {
+    font-size:28px;
+    background-color: dimgray;
+    color:white;
+    padding-left:15px;
+    padding-top:5px;
+    padding-bottom:5px;
+    height:40px;
+    line-height: 40px;
+    clear:both;
+}
+
+.float-left {
+    float: left;
+    margin:20px;
+}
+
+.float-right{
+    float:right;
+    margin:20px;
+}
+
+.photo-container{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.photo-item{
+    margin:20px;
+}
+
+
+#photo{
+    clear:both;
+}
+
+#mealkit{
+    border:1px solid black;
+    border-collapse: collapse;
+    margin:25px;
+}
+
+#mealkit th {
+    border:1px solid black;
+    background-color: gray;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#mealkit td {
+    border:1px solid black;
+    font-size: 18px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+#mealkit tr:hover{
+    background-color: gainsboro;
+}
+
+#LINK a{
+    text-decoration: none;
+    color:black
+}
+
+input:focus{
+    outline:none;
+    border:3px solid green;
+}
+
+textarea:focus{
+    outline:none;
+    border:3px solid green;
+}
